@@ -1,15 +1,16 @@
 package jm.task.core.jdbc;
 
 
+import jm.task.core.jdbc.dao.UserDaoHibernateImpl;
 import jm.task.core.jdbc.model.User;
-import jm.task.core.jdbc.service.UserServiceImpl;
 
 import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
         // реализуйте алгоритм здесь
-        UserServiceImpl test = new UserServiceImpl();
+
+        UserDaoHibernateImpl test = new UserDaoHibernateImpl();
         //1. создание таблицы
         test.createUsersTable();
 
@@ -41,5 +42,6 @@ public class Main {
 
         //5. Удаление таблицы
         test.dropUsersTable();
+
     }
 }

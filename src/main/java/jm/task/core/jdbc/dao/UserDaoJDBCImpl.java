@@ -1,6 +1,7 @@
 package jm.task.core.jdbc.dao;
 
 import jm.task.core.jdbc.model.User;
+import jm.task.core.jdbc.util.Util;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -15,7 +16,7 @@ public class UserDaoJDBCImpl implements UserDao {
         Connection conn = null;
         Statement stmt = null;
         try {
-            conn = new jm.task.core.jdbc.util.Util().getConnection();
+            conn = Util.getConnection();
             conn.setAutoCommit(false);
             stmt = conn.createStatement();
             stmt.execute("CREATE TABLE IF NOT EXISTS user ("
