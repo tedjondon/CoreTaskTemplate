@@ -8,6 +8,7 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
+        //test branch
         // реализуйте алгоритм здесь
 
         UserDaoHibernateImpl test = new UserDaoHibernateImpl();
